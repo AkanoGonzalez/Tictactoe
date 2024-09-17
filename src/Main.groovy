@@ -1,4 +1,4 @@
-class TicTacToe {
+class TicTacToeGame {
   static char[][] board = [
           ['1', '2', '3'],
           ['4', '5', '6'],
@@ -13,19 +13,6 @@ class TicTacToe {
       }
     }
     println ""
-  }
-
-  static boolean checkWin(char player) {
-    return (
-            (board[0][0] == player && board[0][1] == player && board[0][2] == player) ||
-                    (board[1][0] == player && board[1][1] == player && board[1][2] == player) ||
-                    (board[2][0] == player && board[2][1] == player && board[2][2] == player) ||
-                    (board[0][0] == player && board[1][0] == player && board[2][0] == player) ||
-                    (board[0][1] == player && board[1][1] == player && board[2][1] == player) ||
-                    (board[0][2] == player && board[1][2] == player && board[2][2] == player) ||
-                    (board[0][0] == player && board[1][1] == player && board[2][2] == player) ||
-                    (board[0][2] == player && board[1][1] == player && board[2][0] == player)
-    )
   }
 
   static boolean isBoardFull() {
@@ -66,7 +53,7 @@ class TicTacToe {
 
       board[row][col] = currentPlayer
 
-      gameWon = checkWin(currentPlayer)
+      gameWon = checkWin.hasPlayerWon(board, currentPlayer)
 
       if (!gameWon) {
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X'
