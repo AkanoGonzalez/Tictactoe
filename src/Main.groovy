@@ -1,5 +1,3 @@
-import java.util.Scanner
-
 class TicTacToe {
   static char[][] board = [
           ['1', '2', '3'],
