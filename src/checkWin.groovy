@@ -1,4 +1,4 @@
-class checkWin {
+class CheckWin {
     //Code funktioniert wie Gewollt IntelliJ markiert es aber als Fehler
     //mit IntelliJ's Korrekturanweisungen funktioniert das Spiel nicht mehr
     static boolean checkWin(char[][] board, char player) {

@@ -53,7 +53,7 @@ class TicTacToeGame {
 
       board[row][col] = currentPlayer
 
-      gameWon = checkWin.hasPlayerWon(board, currentPlayer)
+      gameWon = CheckWin.hasPlayerWon(board, currentPlayer)
 
       if (!gameWon) {
         currentPlayer = (currentPlayer == 'X') ? 'O' : 'X'
